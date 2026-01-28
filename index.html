@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Workout Log</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Workout Log</p>
+          <h1 id="day-title">Upper Chest Bias — Day 1</h1>
+          <p class="subhead">Routine extracted from <span class="code">chest-focused-routine.rtf</span>. Log your weights, sets, reps, and notes for each exercise.</p>
+        </div>
+        <div class="session">
+          <label for="day-select">Routine day</label>
+          <select id="day-select"></select>
+          <label for="session-date">Session date</label>
+          <input id="session-date" type="date" />
+          <div class="io-actions">
+            <button type="button" id="export-csv">Export CSV</button>
+            <label class="import-button">
+              Import CSV
+              <input type="file" id="import-csv" accept=".csv" />
+            </label>
+            <a class="link-button" href="log.html">Full Log</a>
+          </div>
+        </div>
+      </header>
+
+      <section class="summary" id="day-summary"></section>
+
+      <section class="grid" id="exercise-grid"></section>
+    </main>
+
+    <template id="exercise-card-template">
+      <article class="card">
+        <header class="card-header">
+          <div>
+            <h2 class="exercise-name"></h2>
+            <p class="exercise-meta"></p>
+          </div>
+          <span class="badge"></span>
+        </header>
+        <div class="exercise-notes"></div>
+        <form class="log-form">
+          <div class="field-row">
+            <label>
+              Sets
+              <input name="sets" type="number" min="1" step="1" placeholder="3" />
+            </label>
+            <label>
+              Reps
+              <input name="reps" type="text" placeholder="8-10" required />
+            </label>
+            <label>
+              Weight
+              <input name="weight" type="text" placeholder="105 lb" />
+            </label>
+          </div>
+          <label>
+            Notes
+            <textarea name="notes" rows="2" placeholder="RIR, tempo, cues"></textarea>
+          </label>
+          <div class="actions">
+            <button type="submit">Log set</button>
+            <button type="button" class="clear-btn">Clear all</button>
+          </div>
+        </form>
+        <div class="log-table">
+          <div class="log-table-header">
+            <span>Sets</span>
+            <span>Reps</span>
+            <span>Weight</span>
+            <span>Notes</span>
+            <span></span>
+          </div>
+          <div class="log-rows"></div>
+        </div>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>

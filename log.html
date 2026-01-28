@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Workout Log - Full History</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Workout Log</p>
+          <h1>Full History</h1>
+          <p class="subhead">All saved entries across every day and date.</p>
+        </div>
+        <div class="session">
+          <label for="search">Search</label>
+          <input id="search" type="search" placeholder="Exercise, notes, weight" />
+          <label for="date-filter">Filter date</label>
+          <input id="date-filter" type="date" />
+          <div class="io-actions">
+            <a class="link-button" href="index.html">Back to Today</a>
+          </div>
+        </div>
+      </header>
+
+      <section class="summary" id="log-summary"></section>
+
+      <section class="log-full">
+        <div class="log-full-header">
+          <span>Date</span>
+          <span>Day</span>
+          <span>Exercise</span>
+          <span>Details</span>
+        </div>
+        <div id="log-rows" class="log-full-rows"></div>
+      </section>
+    </main>
+
+    <script src="log.js"></script>
+  </body>
+</html>

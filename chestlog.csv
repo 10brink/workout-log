@@ -1,0 +1,63 @@
+date,dayId,exerciseId,sets,reps,weight,notes,minutes,details,timestamp
+2026-01-26,back_tris,Neutral-Grip Pulldown,3,10/9/9,110,,,
+2026-01-26,back_tris,Chest-Supported Row,2,15/13,70,,,
+2026-01-26,back_tris,Cable Lateral Raise,3,12/5/5,11,,,
+2026-01-26,back_tris,DB Lateral Raise,1,20,10,,,
+2026-01-26,back_tris,Overhead Triceps Extension,2,20/20,"22,27.5",,,
+2026-01-26,back_tris,Straight-Arm Pulldown,2,15/15,33,"tough",,
+2026-01-26,back_tris,Sauna,1,,,"",15,,2026-01-26T18:00
+
+2026-01-25,day-6,Back Squat,2,5/4,235,"top set",,
+2026-01-25,day-6,DB Split Squat,2,10/10,25,,,
+2026-01-25,day-6,Lying Ham Curl,3,15/15/15,90,,,
+2026-01-25,day-6,Sauna,1,,,"",15,,2026-01-25T18:00
+
+2026-01-24,upper_chest_A,Low-Incline Barbell Press,4,9/9/9/8,105,,,
+2026-01-24,upper_chest_A,Cable Upper-Chest Fly,3,15/15/14,11,,,
+2026-01-24,upper_chest_A,Smith Low-Incline Press,3,13/11/10,60,"controlled eccentrics",,
+2026-01-24,upper_chest_A,DB Lateral Raise,4,20/20/20/25,10,,,
+2026-01-24,upper_chest_A,Cable Pulldown,2,15/15,22,,,
+2026-01-24,upper_chest_A,Dead Bug,2,10/10,,,"core",,
+
+2026-01-21,recovery,Dead Hang,2,15s/20s,,passive/active,,
+2026-01-21,recovery,Reverse Pec Deck,1,20,30,,,
+2026-01-21,recovery,Sauna,1,,,"deep squat",15,,2026-01-21T18:00
+
+2026-01-20,lower,Tempo Squat,3,8/8/8,135,"4s down 1s up",,
+2026-01-20,lower,RDL,3,12/10/10,135,"3s eccentric",,
+2026-01-20,lower,Farmer Carry,3,40s/40s/40s,"60,50,40",,,
+2026-01-20,lower,Calf Raise,3,12/12/8,90,"2s bottom 3s top",,
+
+2026-01-19,upper_chest_B,Flat Barbell Bench,2,6/6,115,"right shoulder pain",,
+2026-01-19,upper_chest_B,DB Flat Press,1,5,35,"shoulder pain",,
+2026-01-19,upper_chest_B,Incline DB Press,3,10/12/12,30,,,
+2026-01-19,upper_chest_B,Cable Fly,3,7/10/20,"16.5,11","short ROM",,
+2026-01-19,upper_chest_B,DB Lateral Raise,3,20/25/27,5,,,
+2026-01-19,upper_chest_B,Reverse Fly,3,15/15/15,8,,,
+2026-01-19,upper_chest_B,Sauna,1,,,"",15,,2026-01-19T18:00
+
+2026-01-18,lats_delts_tris,Neutral-Grip Pulldown,3,10/10/10,99,,,
+2026-01-18,lats_delts_tris,Chest-Supported Row,3,10/12/12,"85,75",,,
+2026-01-18,lats_delts_tris,DB Lateral Raise,3,25/25/27,8,,,
+2026-01-18,lats_delts_tris,Overhead Triceps Extension,3,15/13/10,33,,,
+2026-01-18,lats_delts_tris,Flat Bench (Technique),2,5/5,95,,,
+2026-01-18,lats_delts_tris,Straight-Arm Pulldown,3,15/15/15,33,"last set grinder",,
+2026-01-18,lats_delts_tris,Sauna,1,,,"",13,,2026-01-18T18:00
+
+2026-01-16,lower,Back Squat,3,7/6/6,"225,195","top + back-offs",,
+2026-01-16,lower,DB Split Squat,2,8/8,25,"left leg grinder",,
+2026-01-16,lower,Lying Ham Curl,3,15/15/15,80,"tough",,
+2026-01-16,lower,Dead Bug,3,10/10/10,,,
+2026-01-16,lower,Pallof Press,2,10/10,11,,,
+2026-01-16,lower,Sauna,1,,,"",15,,2026-01-16T18:00
+
+2026-01-15,upper_chest_A,Incline Barbell Press,4,10/10/10/10,100,"slow ecc + pause",,
+2026-01-15,upper_chest_A,Smith Incline Press,3,8/10/11,"90,70","shoulder pain",,
+2026-01-15,upper_chest_A,Cable Fly Low-to-High,2,15/15,11,"stretch pause",,
+2026-01-15,upper_chest_A,Face Pull,1,25,11,,,
+2026-01-15,upper_chest_A,DB Lateral Raise,4,20/25/25/40,"10,5","partials last",,
+2026-01-15,upper_chest_A,Overhead Cable Triceps Extension,3,15/12/10,33,,,
+2026-01-15,upper_chest_A,Bicep Curl,2,12/12,40,,,
+2026-01-15,upper_chest_A,Pallof Press,2,10/10,16.5,,,
+2026-01-15,upper_chest_A,Dead Bug,2,11/11,,,
+2026-01-15,upper_chest_A,Sauna,1,,,"deep squat + wall slides",25,,2026-01-15T18:00
