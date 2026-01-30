@@ -437,10 +437,13 @@ const template = document.getElementById("exercise-card-template");
 const exportButton = document.getElementById("export-csv");
 const importInput = document.getElementById("import-csv");
 
-const today = new Date();
-const todayISO = today.toISOString().slice(0, 10);
+function getLocalISODate() {
+  const now = new Date();
+  const offset = now.getTimezoneOffset() * 60000;
+  return new Date(now.getTime() - offset).toISOString().slice(0, 10);
+}
 
-dateInput.value = todayISO;
+dateInput.value = getLocalISODate();
 
 function loadStore() {
   try {
@@ -822,15 +825,20 @@ function renderLogsWithLayout(routineId, exercise, container) {
     const row = document.createElement("div");
     row.className = "log-row";
     row.style.gridTemplateColumns = gridTemplate;
-    const cells = layout.fields
-      .map((field) => `<span>${entry[field] || "—"}</span>`)
-      .join("");
-    row.innerHTML = `
-      ${cells}
-      <button type="button" data-index="${index}">✕</button>
-    `;
 
-    row.querySelector("button").addEventListener("click", () => {
+    layout.fields.forEach((field) => {
+      const cell = document.createElement("span");
+      cell.textContent = entry[field] || "—";
+      row.append(cell);
+    });
+
+    const removeButton = document.createElement("button");
+    removeButton.type = "button";
+    removeButton.textContent = "✕";
+    removeButton.dataset.index = index;
+    row.append(removeButton);
+
+    removeButton.addEventListener("click", () => {
       const sourceLogs = getLogs(store, dateValue, dayId, exercise.id);
       const updated = [...sourceLogs];
       updated.splice(index, 1);

@@ -13,6 +13,43 @@ const dayLabels = {
   "day-6": "Day 6"
 };
 
+const exerciseLabels = {
+  "face-pulls-warmup": "Face Pulls (Warm-up)",
+  "low-incline-bb-press": "Low-Incline Barbell Press (20-30°)",
+  "smith-low-incline-press": "Smith Low-Incline Press",
+  "cable-upper-chest-fly": "Cable Upper-Chest Fly (low-to-high)",
+  "db-lateral-raise": "DB Lateral Raise",
+  "overhead-cable-tri-ext": "Overhead Cable Triceps Extension",
+  "dead-bugs": "Dead Bugs",
+  sauna: "Sauna",
+  "back-squat": "Back Squat (Top Sets)",
+  "back-off-squat": "Back-Off Squats",
+  "db-split-squat": "DB Split Squat",
+  "ham-curl": "Seated or Lying Ham Curl",
+  "pallof-press": "Pallof Press",
+  "neutral-grip-pulldown": "Neutral-Grip Pulldown",
+  "chest-supported-row": "Chest-Supported Row",
+  "straight-arm-pulldown": "Straight-Arm Pulldown",
+  "lat-raise": "Cable or Machine Lateral Raise",
+  "overhead-tri-ext": "Overhead Triceps Extension",
+  "technique-flat-bench": "Technique Flat Bench",
+  "optional-bicep-curl": "Bicep Curl",
+  "optional-pushdowns": "Pushdowns (Pump)",
+  "optional-face-pulls": "Face Pulls / Reverse Fly",
+  "side-plank": "Side Plank",
+  "zone-2-cardio": "Zone 2 Cardio",
+  "flat-bench": "Flat Bench / Low-Incline BB",
+  "smith-incline-press": "Smith Incline Press (20-25°)",
+  "landmine-or-db-press": "Landmine Press or Incline DB Press (30°)",
+  "cable-fly": "Cable Fly (short ROM, squeeze)",
+  "lateral-raise-finisher": "Lateral Raise Finisher",
+  "tempo-squat": "Tempo Squat / Hack Squat",
+  "hip-hinge": "Hip Hinge (RDL / Back Extension)",
+  "calf-raise": "Calf Raise Machine",
+  carry: "Farmer Carry",
+  "optional-seated-ham-curl": "Seated Ham Curls"
+};
+
 function loadStore() {
   try {
     return JSON.parse(localStorage.getItem(storageKey)) ?? {};
@@ -82,11 +119,13 @@ function render() {
       return true;
     }
 
+    const exerciseLabel = exerciseLabels[row.exerciseId] || row.exerciseId;
     const haystack = [
       row.date,
       row.dayId,
       dayLabels[row.dayId] || row.dayId,
       row.exerciseId,
+      exerciseLabel,
       row.entry.sets,
       row.entry.reps,
       row.entry.weight,
@@ -117,12 +156,23 @@ function render() {
   filtered.forEach((row) => {
     const entry = document.createElement("div");
     entry.className = "log-full-row";
-    entry.innerHTML = `
-      <span>${row.date}</span>
-      <span>${dayLabels[row.dayId] || row.dayId}</span>
-      <span>${row.exerciseId}</span>
-      <span>${buildDetails(row.entry)}</span>
-    `;
+
+    const dateSpan = document.createElement("span");
+    dateSpan.textContent = row.date;
+    entry.append(dateSpan);
+
+    const daySpan = document.createElement("span");
+    daySpan.textContent = dayLabels[row.dayId] || row.dayId;
+    entry.append(daySpan);
+
+    const exerciseSpan = document.createElement("span");
+    exerciseSpan.textContent = exerciseLabels[row.exerciseId] || row.exerciseId;
+    entry.append(exerciseSpan);
+
+    const detailSpan = document.createElement("span");
+    detailSpan.textContent = buildDetails(row.entry);
+    entry.append(detailSpan);
+
     rowsEl.append(entry);
   });
 }
